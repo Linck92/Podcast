@@ -1,0 +1,161 @@
+.footer {
+
+    &__inner {
+        padding-block: 132px;
+
+        @include tablet {
+        padding-block: 30px;
+        }
+    }
+
+    &__logo {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        @include tablet {
+            width: 327px;
+            }
+        
+        @include mobile-l {
+            width: 275px;
+            }
+
+        @include mobile {
+        width: 226px;
+        }
+
+        &-description {
+            font-family: var(--font-family-alt);
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--color-gray-text);
+        }
+
+      
+    }
+
+    &__header {
+        display: flex;
+        margin-bottom: 110px;
+
+        @include tablet {
+        margin-bottom: 30px;
+        }
+    }
+
+    &__title {
+        @include tablet {
+            font-size: 20px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: end;
+        color: var(--color-gray-text);
+        height: 208px;
+
+        @include mobile {
+        height: 170px;
+        }
+
+        a {
+            @include hover {
+                color: var(--color-light);
+            }
+        }
+    }
+
+    &__conversation {
+        display: flex;
+        flex-direction: column;
+        width: 332px;
+
+        &-title {
+            margin-bottom: 23px;
+            font-size: 18px;
+
+        }
+
+        &-contacts {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            font-family: var(--font-family-alt);
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        &-extra {
+            margin-top: auto;
+            font-family: var(--font-family-alt);
+            font-size: 13px;
+            font-weight: 400;
+        }
+    }
+
+    &__find-us {
+        display: flex;
+        flex-direction: column;
+        width: 332px;        
+
+        &-title {
+            margin-bottom: 23px;
+            font-size: 18px;
+        }
+
+        &-address {
+            display: flex;
+            flex-direction: column;
+            line-height: 27px;
+            font-family: var(--font-family-alt);
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        &-extra {
+            margin-top: auto;
+            font-family: var(--font-family-alt);
+            font-size: 13px;
+            font-weight: 400;
+        }
+    }
+
+    &__follow-us {
+        display: flex;
+        flex-direction: column;
+        width: 332px;
+
+        &-title {
+            margin-bottom: 23px;
+            font-size: 18px;
+
+        }
+
+        &-soc1als {
+            display: flex;
+            column-gap: 20px;
+
+            a {
+                @include flex-center
+            }
+            
+        }
+
+        &-extra {
+            font-family: var(--font-family-alt);
+            font-size: 13px;
+            font-weight: 400;
+            margin-top: auto;
+            white-space: nowrap;
+        }
+    }
+
+    svg {
+        width: 21px;
+        height: 21px;
+    }
+
+}

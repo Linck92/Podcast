@@ -1,0 +1,39 @@
+.mobile-overlay {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 14px 20px;
+    border: none;
+    background-color: rgb(221, 217, 211);
+    /*<dialog> у нас почему то не на весь экран. 
+  Устраняем это с помощью пседвокласса :model характерного только для <dialog>*/
+    &:modal {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  
+    &__close-button-wrapper {
+      display: flex;
+      justify-content: end; //Чтобы кнопка сместилась в правый угол <form>
+    }
+  
+    &__list {
+      @include flex-center;
+      flex-direction: column;
+      row-gap: 30px;
+      min-height: 80vh;
+    }
+
+    &__item {
+        font-size: 20px;
+    }
+
+    &__link {
+        padding: 5px;
+        @include hover {
+            border-radius: 4px;
+            box-shadow: -7px 0 7px white;        
+        }
+    }
+  }
+  

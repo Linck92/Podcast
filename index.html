@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a class="header__logo logo" href="/">
+                <img class="logo__image" src="./icons/footr-logo.png" alt="">
+            </a>
+            <nav class="header__menu hidden-tablet">
+                <ul class="header__menu-list" id="list">
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="/">Homes</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="/">Pages</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="/">Podcast</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="/">Blog</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="/">Shop</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__wrapper">
+                <form class="header__form">
+                    <input class="header__input" type="search">
+                    <button class="header__search-button" type="submit" title="Search">Search</button>
+                </form>
+                <button class="header__burger-button visible-tablet" id="button" type="button" title="Open menu" onclick="mobileOverlay.showModal()"> <!--- Тут мы обратились по id к mobileOverlay и вызвали его метод .showModal() который показывает содержимое при нажатии onclick-->
+                    <span class="visually-hidden">Open navigation menu</span>
+                    <span class="header__burger-button-circle"></span>
+                    <span class="header__burger-button-circle"></span>
+                    <span class="header__burger-button-circle"></span>
+                    <span class="header__burger-button-circle"></span>
+                    <span class="header__burger-button-circle"></span>
+                    <span class="header__burger-button-circle"></span>
+                    <span class="header__burger-button-circle"></span>
+                    <span class="header__burger-button-circle"></span>
+                    <span class="header__burger-button-circle"></span>
+                </button>
+            </div>
+        </div>
+        <h1 class="visually-hidden">Resonator podcasts</h1>
+        <div class="new-episode container">
+            <div class="new-episode__body ">
+                <h2 class="new-episode__title">New episode <br> available now</h2>
+                <div class="new-episode__description">
+                    <p>Available on Apple Soundcast and Spotify.</p>
+                </div>
+                <div class="new-episode__listen-on">
+                    <a class="new-episode__link" href="/">
+                        <img class="new-episode__image" src="./icons/listen-on-1png.png" alt="listen on apple"
+                            width="185" height="54" loading="lazy" title="listen on apple">
+                    </a>
+                    <a class="new-episode__link" href="/">
+                        <img class="new-episode__image" src="./icons/listen-on-2png.png" alt="listen on soundcloud"
+                            width="185" height="54" loading="lazy" title="listen on soundcloud">
+                    </a>
+                </div>
+                <article class="new-episode__audio">
+                    <img class="new-episode__audio-image" src="./image/new-podcast-image.png" alt="" width="291"
+                        height="291" loading="lazy">
+                    <div class="new-episode__audio-wrapper">
+                        <h3 class="new-episode__audio-title">Timmy Mike: the nature <br> of design</h3>
+                        <a class="new-episode__audio-link" href="/">Episode page &#8594;</a>
+                        <div class="new-episode__audio-description">
+                            <p>Episode 1 • Microphone • <time datetime="0m 34s">0:34</time></p>
+                        </div>
+                        <audio class="new-episode__audio-audio" controls>
+                            <source
+                                src="./audio/Это правильно_🤔 #юмор #интервью #истории #подкаст #история #подкасты #психология #стендап #нарезки (320 kbps).mp3"
+                                type="audio/mpeg">
+                            <source
+                                src="./audio/Это-правильно__-_юмор-_интервью-_истории-_подкаст-_история-_подкасты-_психология-_стендап-_нарезки-_.ogg"
+                                type="audio/ogg">
+                            <p>
+                                Ваш браузер не поддерживает встроенное аудио. Попробуйте
+                                <a href="audio.mp3" download>скачать</a> файл.
+                            </p>
+                        </audio>
+                        <button class="new-episode__button" onclick="document.getElementById('player').play()">
+                            <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.58536 3.27722C2.58536 3.27722 2.98484 2.86704 3.78381 2.04668C4.58277 1.22632 6.12363 0.816135 8.40637 0.816135C10.6891 0.816135 12.6295 1.6365 14.2274 3.27722C15.8253 4.91795 16.6243 6.90822 16.6243 9.24804V15.7967C16.6243 16.5671 16.3532 17.2305 15.811 17.787C15.2689 18.3434 14.6269 18.6216 13.885 18.6216H11.1457V11.0885H14.7838V9.24804C14.7838 7.42184 14.1632 5.87385 12.9219 4.60407C11.6807 3.33429 10.1755 2.6994 8.40637 2.6994C6.63724 2.6994 5.13206 3.33429 3.89081 4.60407C2.64957 5.87385 2.02894 7.42184 2.02894 9.24804V11.0885H5.66708V18.6216H2.92778C2.18588 18.6216 1.54386 18.3434 1.00171 17.787C0.459553 17.2305 0.188477 16.5671 0.188477 15.7967V9.24804C0.188477 6.90822 0.987439 4.91795 2.58536 3.27722Z" fill="black"/>
+                                </svg>
+                        </button> 
+                    </div>
+                </article>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section light">
+            <div class="best-place container">
+                <div class="best-place__body">
+                    <h2 class="best-place__title">Best places to find design inspiration</h2>
+                    <audio class="best-place__audio" controls>
+                        <source
+                            src="./audio/Это правильно_🤔 #юмор #интервью #истории #подкаст #история #подкасты #психология #стендап #нарезки (320 kbps).mp3"
+                            type="audio/mpeg">
+                        <source
+                            src="./audio/Это-правильно__-_юмор-_интервью-_истории-_подкаст-_история-_подкасты-_психология-_стендап-_нарезки-_.ogg"
+                            type="audio/ogg">
+                        <p>
+                            Ваш браузер не поддерживает встроенное аудио. Попробуйте
+                            <a href="audio.mp3" download>скачать</a> файл.
+                        </p>
+                    </audio>
+                    <div class="best-place__description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                        <p>Ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <a class="best-place__link" href="/">Episode page &#8594;</a>
+                </div>
+                <img class="best-place__image" src="./image/best-place-image.jpg" alt="" width="525" height="519" loading="lazy">
+            </div>
+        </section>
+        <section class="section">
+            <div class="top-podcasts">
+                <header class="top-podcasts__header">
+                    <h2 class="top-podcasts__title">Top podcasts:</h2>
+                    <div class="top-podcasts__description">
+                        <p>Discover the selection of the most popular podcasts.</p>
+                    </div>
+                </header>
+                <div class="top-podcasts__body container">
+                    <div class="top-podcasts__podcasts">
+                            <article class="top-podcasts__audio isActive">
+                                <img class="top-podcasts__audio-image" src="./image/top-podcasts-2.png" alt="" width="392"
+                                    height="392" loading="lazy">
+                                <div class="top-podcasts__audio-wrapper">
+                                    <div class="top-podcasts__audio-description">
+                                        <p>Episode 1 • Technology</p>
+                                    </div>
+                                    <h3 class="top-podcasts__audio-title">SRKP selects: keep your watch</h3>
+                                    <a class="top-podcasts__audio-link" href="/">Episode page &#8594;</a>
+                                    <audio id="player" class="top-podcasts__audio-audio">
+                                        <source
+                                            src="./audio/Это правильно_🤔 #юмор #интервью #истории #подкаст #история #подкасты #психология #стендап #нарезки (320 kbps).mp3"
+                                            type="audio/mpeg">
+                                        <source
+                                            src="./audio/Это-правильно__-_юмор-_интервью-_истории-_подкаст-_история-_подкасты-_психология-_стендап-_нарезки-_.ogg"
+                                            type="audio/ogg">
+                                        <p>
+                                            Ваш браузер не поддерживает встроенное аудио. Попробуйте
+                                            <a href="audio.mp3" download>скачать</a> файл.
+                                        </p>
+                                    </audio>
+                                    <button class="top-podcasts__button" onclick="document.getElementById('player').play()">
+                                        <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.58536 3.27722C2.58536 3.27722 2.98484 2.86704 3.78381 2.04668C4.58277 1.22632 6.12363 0.816135 8.40637 0.816135C10.6891 0.816135 12.6295 1.6365 14.2274 3.27722C15.8253 4.91795 16.6243 6.90822 16.6243 9.24804V15.7967C16.6243 16.5671 16.3532 17.2305 15.811 17.787C15.2689 18.3434 14.6269 18.6216 13.885 18.6216H11.1457V11.0885H14.7838V9.24804C14.7838 7.42184 14.1632 5.87385 12.9219 4.60407C11.6807 3.33429 10.1755 2.6994 8.40637 2.6994C6.63724 2.6994 5.13206 3.33429 3.89081 4.60407C2.64957 5.87385 2.02894 7.42184 2.02894 9.24804V11.0885H5.66708V18.6216H2.92778C2.18588 18.6216 1.54386 18.3434 1.00171 17.787C0.459553 17.2305 0.188477 16.5671 0.188477 15.7967V9.24804C0.188477 6.90822 0.987439 4.91795 2.58536 3.27722Z" fill="black"/>
+                                            </svg>
+                                    </button> 
+                                </div>
+                            </article>
+                            <article class="top-podcasts__audio">
+                                <img class="top-podcasts__audio-image" src="./image/top-podcasts-1.png" alt="" width="392"
+                                    height="392" loading="lazy">
+                                <div class="top-podcasts__audio-wrapper">
+                                    <div class="top-podcasts__audio-description">
+                                        <p>Episode 2 • Technology</p>
+                                    </div>
+                                    <h3 class="top-podcasts__audio-title">SRKP selects: keep your watch</h3>
+                                    <a class="top-podcasts__audio-link" href="/">Episode page &#8594;</a>
+                                    <audio id="player" class="top-podcasts__audio-audio">
+                                        <source
+                                            src="./audio/Это правильно_🤔 #юмор #интервью #истории #подкаст #история #подкасты #психология #стендап #нарезки (320 kbps).mp3"
+                                            type="audio/mpeg">
+                                        <source
+                                            src="./audio/Это-правильно__-_юмор-_интервью-_истории-_подкаст-_история-_подкасты-_психология-_стендап-_нарезки-_.ogg"
+                                            type="audio/ogg">
+                                        <p>
+                                            Ваш браузер не поддерживает встроенное аудио. Попробуйте
+                                            <a href="audio.mp3" download>скачать</a> файл.
+                                        </p>
+                                    </audio>
+                                    <button class="top-podcasts__button" onclick="document.getElementById('player').play()">
+                                        <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.58536 3.27722C2.58536 3.27722 2.98484 2.86704 3.78381 2.04668C4.58277 1.22632 6.12363 0.816135 8.40637 0.816135C10.6891 0.816135 12.6295 1.6365 14.2274 3.27722C15.8253 4.91795 16.6243 6.90822 16.6243 9.24804V15.7967C16.6243 16.5671 16.3532 17.2305 15.811 17.787C15.2689 18.3434 14.6269 18.6216 13.885 18.6216H11.1457V11.0885H14.7838V9.24804C14.7838 7.42184 14.1632 5.87385 12.9219 4.60407C11.6807 3.33429 10.1755 2.6994 8.40637 2.6994C6.63724 2.6994 5.13206 3.33429 3.89081 4.60407C2.64957 5.87385 2.02894 7.42184 2.02894 9.24804V11.0885H5.66708V18.6216H2.92778C2.18588 18.6216 1.54386 18.3434 1.00171 17.787C0.459553 17.2305 0.188477 16.5671 0.188477 15.7967V9.24804C0.188477 6.90822 0.987439 4.91795 2.58536 3.27722Z" fill="black"/>
+                                            </svg>
+                                    </button> 
+                                </div>
+                            </article>
+                            <article class="top-podcasts__audio">
+                                <img class="top-podcasts__audio-image" src="./image/new-podcast-image.png" alt="" width="392"
+                                    height="392" loading="lazy">
+                                <div class="top-podcasts__audio-wrapper">
+                                    <div class="top-podcasts__audio-description">
+                                        <p>Episode 3 • Technology</p>
+                                    </div>
+                                    <h3 class="top-podcasts__audio-title">SRKP selects: keep your watch</h3>
+                                    <a class="top-podcasts__audio-link" href="/">Episode page &#8594;</a>
+                                    <audio id="player" class="top-podcasts__audio-audio">
+                                        <source
+                                            src="./audio/Это правильно_🤔 #юмор #интервью #истории #подкаст #история #подкасты #психология #стендап #нарезки (320 kbps).mp3"
+                                            type="audio/mpeg">
+                                        <source
+                                            src="./audio/Это-правильно__-_юмор-_интервью-_истории-_подкаст-_история-_подкасты-_психология-_стендап-_нарезки-_.ogg"
+                                            type="audio/ogg">
+                                        <p>
+                                            Ваш браузер не поддерживает встроенное аудио. Попробуйте
+                                            <a href="audio.mp3" download>скачать</a> файл.
+                                        </p>
+                                    </audio>
+                                    <button class="top-podcasts__button" onclick="document.getElementById('player').play()">
+                                        <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.58536 3.27722C2.58536 3.27722 2.98484 2.86704 3.78381 2.04668C4.58277 1.22632 6.12363 0.816135 8.40637 0.816135C10.6891 0.816135 12.6295 1.6365 14.2274 3.27722C15.8253 4.91795 16.6243 6.90822 16.6243 9.24804V15.7967C16.6243 16.5671 16.3532 17.2305 15.811 17.787C15.2689 18.3434 14.6269 18.6216 13.885 18.6216H11.1457V11.0885H14.7838V9.24804C14.7838 7.42184 14.1632 5.87385 12.9219 4.60407C11.6807 3.33429 10.1755 2.6994 8.40637 2.6994C6.63724 2.6994 5.13206 3.33429 3.89081 4.60407C2.64957 5.87385 2.02894 7.42184 2.02894 9.24804V11.0885H5.66708V18.6216H2.92778C2.18588 18.6216 1.54386 18.3434 1.00171 17.787C0.459553 17.2305 0.188477 16.5671 0.188477 15.7967V9.24804C0.188477 6.90822 0.987439 4.91795 2.58536 3.27722Z" fill="black"/>
+                                            </svg>
+                                    </button> 
+                                </div>
+                            </article>
+                    </div>
+                    <div class="top-podcasts__pagination">
+                        <span class="top-podcasts__pagination-circle isCurrent" onclick="indicatorChange(0);"></span>
+                        <span class="top-podcasts__pagination-circle" onclick="indicatorChange(1);"></span>
+                        <span class="top-podcasts__pagination-circle" onclick="indicatorChange(2);"></span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="section light">
+            <div class="essential container">
+                <header class="essential__header">
+                    <h2 class="essential__title">Essential episodes:</h2>
+                    <a class="essential__link" href="/">View all episodes &#8594;</a>
+                </header>
+                <div class="essential__episodes">
+                    <article class="essential__audio">
+                        <img class="essential__audio-image" src="./image/essential episodes/1.png" alt="/" width="386"
+                            height="386" loading="lazy">
+                        <div class="essential__audio-wrapper">
+                            <div class="essential__audio-description">
+                                <p>Episode 1 • Technology</p>
+                            </div>
+                            <h3 class="essential__audio-title">SRKP selects: how the new ages work</h3>
+                            <a class="essential__audio-link" href="/">Share 
+                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.2813 0.937424C15.7932 0.937424 20.2618 5.40487 20.2618 10.9179C20.2618 16.4298 15.7932 20.8984 10.2813 20.8984C4.7694 20.8984 0.300781 16.4298 0.300781 10.9179C0.300781 5.40604 4.7694 0.937424 10.2813 0.937424ZM12.3534 13.1799L7.75731 10.9593C7.75887 10.9316 7.76121 10.9031 7.76121 10.8754L12.3522 8.6575C12.6618 8.89064 13.0446 9.03021 13.4614 9.03021C14.4793 9.03021 15.3051 8.20565 15.3051 7.18655C15.3051 6.16705 14.4793 5.34249 13.4614 5.34249C12.4446 5.34249 11.6185 6.16861 11.6185 7.18655V7.18772L7.06764 9.38577C6.75185 9.13509 6.3538 8.98421 5.91988 8.98421C4.90195 8.98421 4.07583 9.80994 4.07583 10.8283C4.07583 11.8462 4.90195 12.6719 5.91988 12.6719C6.28792 12.6719 6.62983 12.5624 6.91793 12.3764L11.6201 14.6493V14.6505C11.6201 15.67 12.4446 16.4945 13.4626 16.4945C14.4805 16.4945 15.3066 15.6688 15.3066 14.6505C15.3066 13.6314 14.4805 12.8068 13.4626 12.8068C13.0458 12.8068 12.6618 12.9464 12.3534 13.1799Z" fill="#8E8B8C"/>
+                                    </svg>
+                            </a>
+                            <button class="essential__button" onclick="document.getElementById('player').play()">
+                                <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.58536 3.27722C2.58536 3.27722 2.98484 2.86704 3.78381 2.04668C4.58277 1.22632 6.12363 0.816135 8.40637 0.816135C10.6891 0.816135 12.6295 1.6365 14.2274 3.27722C15.8253 4.91795 16.6243 6.90822 16.6243 9.24804V15.7967C16.6243 16.5671 16.3532 17.2305 15.811 17.787C15.2689 18.3434 14.6269 18.6216 13.885 18.6216H11.1457V11.0885H14.7838V9.24804C14.7838 7.42184 14.1632 5.87385 12.9219 4.60407C11.6807 3.33429 10.1755 2.6994 8.40637 2.6994C6.63724 2.6994 5.13206 3.33429 3.89081 4.60407C2.64957 5.87385 2.02894 7.42184 2.02894 9.24804V11.0885H5.66708V18.6216H2.92778C2.18588 18.6216 1.54386 18.3434 1.00171 17.787C0.459553 17.2305 0.188477 16.5671 0.188477 15.7967V9.24804C0.188477 6.90822 0.987439 4.91795 2.58536 3.27722Z" fill="black"/>
+                                    </svg>
+                            </button> 
+                        </div>
+                    </article>
+                    <article class="essential__audio">
+                        <img class="essential__audio-image" src="./image/essential episodes/2.png" alt="/" width="386"
+                            height="386" loading="lazy">
+                        <div class="essential__audio-wrapper">
+                            <div class="essential__audio-description">
+                                <p>Episode 2 • Technology</p>
+                            </div>
+                            <h3 class="essential__audio-title">SRKP selects: a new mindset today</h3>
+                            <a class="essential__audio-link" href="/">Share
+                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.2813 0.937424C15.7932 0.937424 20.2618 5.40487 20.2618 10.9179C20.2618 16.4298 15.7932 20.8984 10.2813 20.8984C4.7694 20.8984 0.300781 16.4298 0.300781 10.9179C0.300781 5.40604 4.7694 0.937424 10.2813 0.937424ZM12.3534 13.1799L7.75731 10.9593C7.75887 10.9316 7.76121 10.9031 7.76121 10.8754L12.3522 8.6575C12.6618 8.89064 13.0446 9.03021 13.4614 9.03021C14.4793 9.03021 15.3051 8.20565 15.3051 7.18655C15.3051 6.16705 14.4793 5.34249 13.4614 5.34249C12.4446 5.34249 11.6185 6.16861 11.6185 7.18655V7.18772L7.06764 9.38577C6.75185 9.13509 6.3538 8.98421 5.91988 8.98421C4.90195 8.98421 4.07583 9.80994 4.07583 10.8283C4.07583 11.8462 4.90195 12.6719 5.91988 12.6719C6.28792 12.6719 6.62983 12.5624 6.91793 12.3764L11.6201 14.6493V14.6505C11.6201 15.67 12.4446 16.4945 13.4626 16.4945C14.4805 16.4945 15.3066 15.6688 15.3066 14.6505C15.3066 13.6314 14.4805 12.8068 13.4626 12.8068C13.0458 12.8068 12.6618 12.9464 12.3534 13.1799Z" fill="#8E8B8C"/>
+                                    </svg>
+                            </a>
+                            <button class="essential__button" onclick="document.getElementById('player').play()">
+                                <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.58536 3.27722C2.58536 3.27722 2.98484 2.86704 3.78381 2.04668C4.58277 1.22632 6.12363 0.816135 8.40637 0.816135C10.6891 0.816135 12.6295 1.6365 14.2274 3.27722C15.8253 4.91795 16.6243 6.90822 16.6243 9.24804V15.7967C16.6243 16.5671 16.3532 17.2305 15.811 17.787C15.2689 18.3434 14.6269 18.6216 13.885 18.6216H11.1457V11.0885H14.7838V9.24804C14.7838 7.42184 14.1632 5.87385 12.9219 4.60407C11.6807 3.33429 10.1755 2.6994 8.40637 2.6994C6.63724 2.6994 5.13206 3.33429 3.89081 4.60407C2.64957 5.87385 2.02894 7.42184 2.02894 9.24804V11.0885H5.66708V18.6216H2.92778C2.18588 18.6216 1.54386 18.3434 1.00171 17.787C0.459553 17.2305 0.188477 16.5671 0.188477 15.7967V9.24804C0.188477 6.90822 0.987439 4.91795 2.58536 3.27722Z" fill="black"/>
+                                    </svg>
+                            </button> 
+                        </div>
+                    </article>
+                    <article class="essential__audio">
+                        <img class="essential__audio-image" src="./image/essential episodes/3.png" alt="" width="386"
+                            height="386" loading="lazy">
+                        <div class="essential__audio-wrapper">
+                            <div class="essential__audio-description">
+                                <p>Episode 3 • Technology</p>
+                            </div>
+                            <h3 class="essential__audio-title">SRKP selects: the latest trends now</h3>
+                            <a class="essential__audio-link" href="/">Share
+                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.2813 0.937424C15.7932 0.937424 20.2618 5.40487 20.2618 10.9179C20.2618 16.4298 15.7932 20.8984 10.2813 20.8984C4.7694 20.8984 0.300781 16.4298 0.300781 10.9179C0.300781 5.40604 4.7694 0.937424 10.2813 0.937424ZM12.3534 13.1799L7.75731 10.9593C7.75887 10.9316 7.76121 10.9031 7.76121 10.8754L12.3522 8.6575C12.6618 8.89064 13.0446 9.03021 13.4614 9.03021C14.4793 9.03021 15.3051 8.20565 15.3051 7.18655C15.3051 6.16705 14.4793 5.34249 13.4614 5.34249C12.4446 5.34249 11.6185 6.16861 11.6185 7.18655V7.18772L7.06764 9.38577C6.75185 9.13509 6.3538 8.98421 5.91988 8.98421C4.90195 8.98421 4.07583 9.80994 4.07583 10.8283C4.07583 11.8462 4.90195 12.6719 5.91988 12.6719C6.28792 12.6719 6.62983 12.5624 6.91793 12.3764L11.6201 14.6493V14.6505C11.6201 15.67 12.4446 16.4945 13.4626 16.4945C14.4805 16.4945 15.3066 15.6688 15.3066 14.6505C15.3066 13.6314 14.4805 12.8068 13.4626 12.8068C13.0458 12.8068 12.6618 12.9464 12.3534 13.1799Z" fill="#8E8B8C"/>
+                                    </svg>
+                            </a>
+                            <button class="essential__button" onclick="document.getElementById('player').play()">
+                                <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.58536 3.27722C2.58536 3.27722 2.98484 2.86704 3.78381 2.04668C4.58277 1.22632 6.12363 0.816135 8.40637 0.816135C10.6891 0.816135 12.6295 1.6365 14.2274 3.27722C15.8253 4.91795 16.6243 6.90822 16.6243 9.24804V15.7967C16.6243 16.5671 16.3532 17.2305 15.811 17.787C15.2689 18.3434 14.6269 18.6216 13.885 18.6216H11.1457V11.0885H14.7838V9.24804C14.7838 7.42184 14.1632 5.87385 12.9219 4.60407C11.6807 3.33429 10.1755 2.6994 8.40637 2.6994C6.63724 2.6994 5.13206 3.33429 3.89081 4.60407C2.64957 5.87385 2.02894 7.42184 2.02894 9.24804V11.0885H5.66708V18.6216H2.92778C2.18588 18.6216 1.54386 18.3434 1.00171 17.787C0.459553 17.2305 0.188477 16.5671 0.188477 15.7967V9.24804C0.188477 6.90822 0.987439 4.91795 2.58536 3.27722Z" fill="black"/>
+                                    </svg>
+                            </button> 
+                        </div>
+                    </article>
+                    <article class="essential__audio">
+                        <img class="essential__audio-image" src="./image/essential episodes/4.png" alt="" width="386"
+                            height="386" loading="lazy">
+                        <div class="essential__audio-wrapper">
+                            <div class="essential__audio-description">
+                                <p>Episode 4 • Technology</p>
+                            </div>
+                            <h3 class="essential__audio-title">SRKP selects: organize your day</h3>
+                            <a class="essential__audio-link" href="/">Share
+                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.2813 0.937424C15.7932 0.937424 20.2618 5.40487 20.2618 10.9179C20.2618 16.4298 15.7932 20.8984 10.2813 20.8984C4.7694 20.8984 0.300781 16.4298 0.300781 10.9179C0.300781 5.40604 4.7694 0.937424 10.2813 0.937424ZM12.3534 13.1799L7.75731 10.9593C7.75887 10.9316 7.76121 10.9031 7.76121 10.8754L12.3522 8.6575C12.6618 8.89064 13.0446 9.03021 13.4614 9.03021C14.4793 9.03021 15.3051 8.20565 15.3051 7.18655C15.3051 6.16705 14.4793 5.34249 13.4614 5.34249C12.4446 5.34249 11.6185 6.16861 11.6185 7.18655V7.18772L7.06764 9.38577C6.75185 9.13509 6.3538 8.98421 5.91988 8.98421C4.90195 8.98421 4.07583 9.80994 4.07583 10.8283C4.07583 11.8462 4.90195 12.6719 5.91988 12.6719C6.28792 12.6719 6.62983 12.5624 6.91793 12.3764L11.6201 14.6493V14.6505C11.6201 15.67 12.4446 16.4945 13.4626 16.4945C14.4805 16.4945 15.3066 15.6688 15.3066 14.6505C15.3066 13.6314 14.4805 12.8068 13.4626 12.8068C13.0458 12.8068 12.6618 12.9464 12.3534 13.1799Z" fill="#8E8B8C"/>
+                                    </svg>
+                            </a>
+                            <button class="essential__button" onclick="document.getElementById('player').play()">
+                                <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.58536 3.27722C2.58536 3.27722 2.98484 2.86704 3.78381 2.04668C4.58277 1.22632 6.12363 0.816135 8.40637 0.816135C10.6891 0.816135 12.6295 1.6365 14.2274 3.27722C15.8253 4.91795 16.6243 6.90822 16.6243 9.24804V15.7967C16.6243 16.5671 16.3532 17.2305 15.811 17.787C15.2689 18.3434 14.6269 18.6216 13.885 18.6216H11.1457V11.0885H14.7838V9.24804C14.7838 7.42184 14.1632 5.87385 12.9219 4.60407C11.6807 3.33429 10.1755 2.6994 8.40637 2.6994C6.63724 2.6994 5.13206 3.33429 3.89081 4.60407C2.64957 5.87385 2.02894 7.42184 2.02894 9.24804V11.0885H5.66708V18.6216H2.92778C2.18588 18.6216 1.54386 18.3434 1.00171 17.787C0.459553 17.2305 0.188477 16.5671 0.188477 15.7967V9.24804C0.188477 6.90822 0.987439 4.91795 2.58536 3.27722Z" fill="black"/>
+                                    </svg>
+                            </button> 
+                        </div>
+                    </article>
+                    <article class="essential__audio">
+                        <img class="essential__audio-image" src="./image/essential episodes/5.png" alt="" width="386"
+                            height="386" loading="lazy">
+                        <div class="essential__audio-wrapper">
+                            <div class="essential__audio-description">
+                                <p>Episode 5 • Technology</p>
+                            </div>
+                            <h3 class="essential__audio-title">SRKP selects: how to plan your work</h3>
+                            <a class="essential__audio-link" href="/">Share
+                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.2813 0.937424C15.7932 0.937424 20.2618 5.40487 20.2618 10.9179C20.2618 16.4298 15.7932 20.8984 10.2813 20.8984C4.7694 20.8984 0.300781 16.4298 0.300781 10.9179C0.300781 5.40604 4.7694 0.937424 10.2813 0.937424ZM12.3534 13.1799L7.75731 10.9593C7.75887 10.9316 7.76121 10.9031 7.76121 10.8754L12.3522 8.6575C12.6618 8.89064 13.0446 9.03021 13.4614 9.03021C14.4793 9.03021 15.3051 8.20565 15.3051 7.18655C15.3051 6.16705 14.4793 5.34249 13.4614 5.34249C12.4446 5.34249 11.6185 6.16861 11.6185 7.18655V7.18772L7.06764 9.38577C6.75185 9.13509 6.3538 8.98421 5.91988 8.98421C4.90195 8.98421 4.07583 9.80994 4.07583 10.8283C4.07583 11.8462 4.90195 12.6719 5.91988 12.6719C6.28792 12.6719 6.62983 12.5624 6.91793 12.3764L11.6201 14.6493V14.6505C11.6201 15.67 12.4446 16.4945 13.4626 16.4945C14.4805 16.4945 15.3066 15.6688 15.3066 14.6505C15.3066 13.6314 14.4805 12.8068 13.4626 12.8068C13.0458 12.8068 12.6618 12.9464 12.3534 13.1799Z" fill="#8E8B8C"/>
+                                    </svg>
+                            </a>
+                            <button class="essential__button" onclick="document.getElementById('player').play()">
+                                <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.58536 3.27722C2.58536 3.27722 2.98484 2.86704 3.78381 2.04668C4.58277 1.22632 6.12363 0.816135 8.40637 0.816135C10.6891 0.816135 12.6295 1.6365 14.2274 3.27722C15.8253 4.91795 16.6243 6.90822 16.6243 9.24804V15.7967C16.6243 16.5671 16.3532 17.2305 15.811 17.787C15.2689 18.3434 14.6269 18.6216 13.885 18.6216H11.1457V11.0885H14.7838V9.24804C14.7838 7.42184 14.1632 5.87385 12.9219 4.60407C11.6807 3.33429 10.1755 2.6994 8.40637 2.6994C6.63724 2.6994 5.13206 3.33429 3.89081 4.60407C2.64957 5.87385 2.02894 7.42184 2.02894 9.24804V11.0885H5.66708V18.6216H2.92778C2.18588 18.6216 1.54386 18.3434 1.00171 17.787C0.459553 17.2305 0.188477 16.5671 0.188477 15.7967V9.24804C0.188477 6.90822 0.987439 4.91795 2.58536 3.27722Z" fill="black"/>
+                                    </svg>
+                            </button> 
+                        </div>
+                    </article>
+                    <article class="essential__audio">
+                        <img class="essential__audio-image" src="./image/essential episodes/6.png" alt="" width="386"
+                            height="386" loading="lazy">
+                        <div class="essential__audio-wrapper">
+                            <div class="essential__audio-description">
+                                <p>Episode 6 • Technology</p>
+                            </div>
+                            <h3 class="essential__audio-title">SRKP selects: trying the best phones</h3>
+                            <a class="essential__audio-link" href="/">Share
+                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.2813 0.937424C15.7932 0.937424 20.2618 5.40487 20.2618 10.9179C20.2618 16.4298 15.7932 20.8984 10.2813 20.8984C4.7694 20.8984 0.300781 16.4298 0.300781 10.9179C0.300781 5.40604 4.7694 0.937424 10.2813 0.937424ZM12.3534 13.1799L7.75731 10.9593C7.75887 10.9316 7.76121 10.9031 7.76121 10.8754L12.3522 8.6575C12.6618 8.89064 13.0446 9.03021 13.4614 9.03021C14.4793 9.03021 15.3051 8.20565 15.3051 7.18655C15.3051 6.16705 14.4793 5.34249 13.4614 5.34249C12.4446 5.34249 11.6185 6.16861 11.6185 7.18655V7.18772L7.06764 9.38577C6.75185 9.13509 6.3538 8.98421 5.91988 8.98421C4.90195 8.98421 4.07583 9.80994 4.07583 10.8283C4.07583 11.8462 4.90195 12.6719 5.91988 12.6719C6.28792 12.6719 6.62983 12.5624 6.91793 12.3764L11.6201 14.6493V14.6505C11.6201 15.67 12.4446 16.4945 13.4626 16.4945C14.4805 16.4945 15.3066 15.6688 15.3066 14.6505C15.3066 13.6314 14.4805 12.8068 13.4626 12.8068C13.0458 12.8068 12.6618 12.9464 12.3534 13.1799Z" fill="#8E8B8C"/>
+                                    </svg>
+                            </a>
+                            <button class="essential__button" onclick="document.getElementById('player').play()">
+                                <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.58536 3.27722C2.58536 3.27722 2.98484 2.86704 3.78381 2.04668C4.58277 1.22632 6.12363 0.816135 8.40637 0.816135C10.6891 0.816135 12.6295 1.6365 14.2274 3.27722C15.8253 4.91795 16.6243 6.90822 16.6243 9.24804V15.7967C16.6243 16.5671 16.3532 17.2305 15.811 17.787C15.2689 18.3434 14.6269 18.6216 13.885 18.6216H11.1457V11.0885H14.7838V9.24804C14.7838 7.42184 14.1632 5.87385 12.9219 4.60407C11.6807 3.33429 10.1755 2.6994 8.40637 2.6994C6.63724 2.6994 5.13206 3.33429 3.89081 4.60407C2.64957 5.87385 2.02894 7.42184 2.02894 9.24804V11.0885H5.66708V18.6216H2.92778C2.18588 18.6216 1.54386 18.3434 1.00171 17.787C0.459553 17.2305 0.188477 16.5671 0.188477 15.7967V9.24804C0.188477 6.90822 0.987439 4.91795 2.58536 3.27722Z" fill="black"/>
+                                    </svg>
+                            </button> 
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="paralax">
+                <video class="paralax__video" controls autoplay muted loop>
+                    <source src="./video/Rock_Formations_21___4K_res.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает HTML5 видео.
+                  </video>
+                  <!-- <img src="./image/h1-video-paralax-img-2048x758.jpg.png" alt="/"> -->
+            </div>
+        </section>
+        <section class="section light">
+            <div class="hosts container">
+                <header class="hosts__header">
+                    <h2 class="hosts__title">Meet your hosts:</h2>
+                    <a class="hosts__link" href="/">View all of them &#8594;</a>
+                </header>
+                <div class="hosts__body">
+                    <article class="hosts__card">
+                        <img class="hosts__card-image" src="./image/hosts/p2-team-img1.jpg.png" alt="/" width="385"
+                            height="445" loading="lazy">
+                        <div class="hosts__card-wrapper">
+                            <h3 class="hosts__card-title">Bella Jimenez</h3>
+                            <div class="hosts__card-description">
+                                <p>Creative Strategist</p>
+                            </div>
+                            <div class="hosts__soc1als">
+                                <a class="hosts__card-link" href="/">
+                                    <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.54682 11.0098V5.52049H0.166992V3.62883L1.54682 3.62797L1.54489 2.51382C1.54489 0.970604 1.96344 0.031208 3.78112 0.031208H5.65627V1.92372H4.34849C3.64046 1.92372 3.6068 2.18789 3.6068 2.68107L3.60401 3.62797H5.67407L5.4738 5.51984L3.6053 5.52049L3.60401 11.0098H1.54682Z" fill="white"/>
+                                        </svg>
+                                </a>
+                                <a class="hosts__card-link" href="/">
+                                    <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.610739 3.46201V11.0098H2.64735V3.46201H0.610739ZM6.82392 3.46265C7.53624 3.46265 9.60779 3.75148 9.60779 6.32458V11.0098H7.45047V6.25811C7.45047 5.70103 7.13483 5.31185 6.45146 5.31185C5.31715 5.31185 5.39199 6.25811 5.39199 6.25811V11.0098H3.34444V3.46201H5.39199V4.05897C5.70633 3.81817 6.07815 3.46265 6.82392 3.46265ZM0.588867 1.74661C0.588867 1.17838 1.04988 0.717368 1.61811 0.717368C2.18633 0.717368 2.64735 1.17838 2.64735 1.74661C2.64735 2.31483 2.18633 2.77585 1.61811 2.77585C1.04988 2.77585 0.588867 2.31483 0.588867 1.74661Z" fill="white"/>
+                                        </svg>
+                                </a>
+                                <a class="hosts__card-link" href="/">
+                                    <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.6874 0.225069C10.5193 0.749981 10.1625 1.19191 9.69718 1.47045C10.1528 1.4162 10.5864 1.29484 10.9906 1.11579C10.6887 1.56715 10.3066 1.96384 9.86528 2.28012C9.87022 2.37682 9.87215 2.47439 9.87215 2.57174C9.87215 5.54838 7.60653 8.98047 3.46341 8.98047C2.19123 8.98047 1.0076 8.60715 0.0107422 7.96838C0.186999 7.98897 0.366044 7.9999 0.547877 7.9999C1.60328 7.9999 2.57484 7.63967 3.34548 7.03585C2.3602 7.01741 1.52844 6.3662 1.24176 5.4714C1.37963 5.49756 1.52029 5.51193 1.66567 5.51193C1.87152 5.51193 2.07051 5.48448 2.2592 5.43302C1.22932 5.22589 0.452672 4.31522 0.452672 3.22423V3.19614C0.756512 3.36489 1.10367 3.46653 1.47291 3.47875C0.869085 3.07542 0.471113 2.38583 0.471113 1.60425C0.471113 1.19127 0.581541 0.804231 0.77581 0.472087C1.88675 1.83476 3.5464 2.7317 5.41832 2.82561C5.37994 2.66094 5.36 2.48875 5.36 2.31228C5.36 1.06905 6.36866 0.0603905 7.61275 0.0603905C8.26031 0.0603905 8.84569 0.333568 9.25675 0.771852C9.76987 0.670429 10.2523 0.483022 10.6874 0.225069Z" fill="white"/>
+                                        </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hosts__card">
+                        <img class="hosts__card-image" src="./image/hosts/p2-team-img2.jpg.png" alt="/" width="385"
+                            height="445" loading="lazy">
+                        <div class="hosts__card-wrapper">
+                            <h3 class="hosts__card-title">Edwin Watson</h3>
+                            <div class="hosts__card-description">
+                                <p>Creative Strategist</p>
+                            </div>
+                            <div class="hosts__soc1als">
+                                <a class="hosts__card-link" href="/">
+                                    <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.54682 11.0098V5.52049H0.166992V3.62883L1.54682 3.62797L1.54489 2.51382C1.54489 0.970604 1.96344 0.031208 3.78112 0.031208H5.65627V1.92372H4.34849C3.64046 1.92372 3.6068 2.18789 3.6068 2.68107L3.60401 3.62797H5.67407L5.4738 5.51984L3.6053 5.52049L3.60401 11.0098H1.54682Z" fill="white"/>
+                                        </svg>
+                                </a>
+                                <a class="hosts__card-link" href="/">
+                                    <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.610739 3.46201V11.0098H2.64735V3.46201H0.610739ZM6.82392 3.46265C7.53624 3.46265 9.60779 3.75148 9.60779 6.32458V11.0098H7.45047V6.25811C7.45047 5.70103 7.13483 5.31185 6.45146 5.31185C5.31715 5.31185 5.39199 6.25811 5.39199 6.25811V11.0098H3.34444V3.46201H5.39199V4.05897C5.70633 3.81817 6.07815 3.46265 6.82392 3.46265ZM0.588867 1.74661C0.588867 1.17838 1.04988 0.717368 1.61811 0.717368C2.18633 0.717368 2.64735 1.17838 2.64735 1.74661C2.64735 2.31483 2.18633 2.77585 1.61811 2.77585C1.04988 2.77585 0.588867 2.31483 0.588867 1.74661Z" fill="white"/>
+                                        </svg>
+                                </a>
+                                <a class="hosts__card-link" href="/">
+                                    <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.6874 0.225069C10.5193 0.749981 10.1625 1.19191 9.69718 1.47045C10.1528 1.4162 10.5864 1.29484 10.9906 1.11579C10.6887 1.56715 10.3066 1.96384 9.86528 2.28012C9.87022 2.37682 9.87215 2.47439 9.87215 2.57174C9.87215 5.54838 7.60653 8.98047 3.46341 8.98047C2.19123 8.98047 1.0076 8.60715 0.0107422 7.96838C0.186999 7.98897 0.366044 7.9999 0.547877 7.9999C1.60328 7.9999 2.57484 7.63967 3.34548 7.03585C2.3602 7.01741 1.52844 6.3662 1.24176 5.4714C1.37963 5.49756 1.52029 5.51193 1.66567 5.51193C1.87152 5.51193 2.07051 5.48448 2.2592 5.43302C1.22932 5.22589 0.452672 4.31522 0.452672 3.22423V3.19614C0.756512 3.36489 1.10367 3.46653 1.47291 3.47875C0.869085 3.07542 0.471113 2.38583 0.471113 1.60425C0.471113 1.19127 0.581541 0.804231 0.77581 0.472087C1.88675 1.83476 3.5464 2.7317 5.41832 2.82561C5.37994 2.66094 5.36 2.48875 5.36 2.31228C5.36 1.06905 6.36866 0.0603905 7.61275 0.0603905C8.26031 0.0603905 8.84569 0.333568 9.25675 0.771852C9.76987 0.670429 10.2523 0.483022 10.6874 0.225069Z" fill="white"/>
+                                        </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hosts__card">
+                        <img class="hosts__card-image" src="./image/hosts/p2-team-img3.jpg.png" alt="/" width="385"
+                            height="445" loading="lazy">
+                        <div class="hosts__card-wrapper">
+                            <h3 class="hosts__card-title">Caitlin Henderson</h3>
+                            <div class="hosts__card-description">
+                                <p>Creative Strategist</p>
+                            </div>
+                            <div class="hosts__soc1als">
+                                <a class="hosts__card-link" href="/">
+                                    <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.54682 11.0098V5.52049H0.166992V3.62883L1.54682 3.62797L1.54489 2.51382C1.54489 0.970604 1.96344 0.031208 3.78112 0.031208H5.65627V1.92372H4.34849C3.64046 1.92372 3.6068 2.18789 3.6068 2.68107L3.60401 3.62797H5.67407L5.4738 5.51984L3.6053 5.52049L3.60401 11.0098H1.54682Z" fill="white"/>
+                                        </svg>
+                                </a>
+                                <a class="hosts__card-link" href="/">
+                                    <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.610739 3.46201V11.0098H2.64735V3.46201H0.610739ZM6.82392 3.46265C7.53624 3.46265 9.60779 3.75148 9.60779 6.32458V11.0098H7.45047V6.25811C7.45047 5.70103 7.13483 5.31185 6.45146 5.31185C5.31715 5.31185 5.39199 6.25811 5.39199 6.25811V11.0098H3.34444V3.46201H5.39199V4.05897C5.70633 3.81817 6.07815 3.46265 6.82392 3.46265ZM0.588867 1.74661C0.588867 1.17838 1.04988 0.717368 1.61811 0.717368C2.18633 0.717368 2.64735 1.17838 2.64735 1.74661C2.64735 2.31483 2.18633 2.77585 1.61811 2.77585C1.04988 2.77585 0.588867 2.31483 0.588867 1.74661Z" fill="white"/>
+                                        </svg>
+                                </a>
+                                <a class="hosts__card-link" href="/">
+                                    <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.6874 0.225069C10.5193 0.749981 10.1625 1.19191 9.69718 1.47045C10.1528 1.4162 10.5864 1.29484 10.9906 1.11579C10.6887 1.56715 10.3066 1.96384 9.86528 2.28012C9.87022 2.37682 9.87215 2.47439 9.87215 2.57174C9.87215 5.54838 7.60653 8.98047 3.46341 8.98047C2.19123 8.98047 1.0076 8.60715 0.0107422 7.96838C0.186999 7.98897 0.366044 7.9999 0.547877 7.9999C1.60328 7.9999 2.57484 7.63967 3.34548 7.03585C2.3602 7.01741 1.52844 6.3662 1.24176 5.4714C1.37963 5.49756 1.52029 5.51193 1.66567 5.51193C1.87152 5.51193 2.07051 5.48448 2.2592 5.43302C1.22932 5.22589 0.452672 4.31522 0.452672 3.22423V3.19614C0.756512 3.36489 1.10367 3.46653 1.47291 3.47875C0.869085 3.07542 0.471113 2.38583 0.471113 1.60425C0.471113 1.19127 0.581541 0.804231 0.77581 0.472087C1.88675 1.83476 3.5464 2.7317 5.41832 2.82561C5.37994 2.66094 5.36 2.48875 5.36 2.31228C5.36 1.06905 6.36866 0.0603905 7.61275 0.0603905C8.26031 0.0603905 8.84569 0.333568 9.25675 0.771852C9.76987 0.670429 10.2523 0.483022 10.6874 0.225069Z" fill="white"/>
+                                        </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer class="footer dark">
+    <div class="footer__inner container">
+        <header class="footer__header">
+            <div class="footer__logo">
+                <a class="footer__logo-image" href="/"><img src="./icons/footr-logo.png" alt="/" width="147" height="22"></a>
+                <div class="footer__logo-description">
+                    <p>The great connection.</p>
+                </div>
+            </div>
+            <h2 class="footer__title">We collaborate with ambitious brands and people; <br> let’s build something great together.</h2>
+        </header>
+        <div class="footer__body">
+            <div class="footer__conversation">
+                <h3 class="footer__conversation-title">Start a conversation:</h3>
+                <address class="footer__conversation-contacts">
+                    <a href="mailto:podcast@example.com">podcast@example.com</a>
+                    <a href="tel:29698667033">+2 969 866 7033</a>
+                </address>
+                <a class="footer__conversation-extra" href="/">Terms & Conditions</a>
+            </div>
+            <div class="footer__find-us">
+                <h3 class="footer__find-us-title">Find us here:</h3>
+                <address class="footer__find-us-address">
+                    <p>Brooklyn, NY 11201 <br>
+                        United States</p>
+                </address>
+                <a class="footer__find-us-extra" href="/">Privacy Policy</a>
+            </div>
+            <div class="footer__follow-us">
+                <h3 class="footer__follow-us-title">Follow us on:</h3>
+                <div class="footer__follow-us-soc1als">
+                    <a href="/">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 470.513 470.513" style="enable-background:new 0 0 470.513 470.513;" xml:space="preserve"><g><path fill="black" d="M271.521,154.17v-40.541c0-6.086,0.28-10.8,0.849-14.13c0.567-3.335,1.857-6.615,3.859-9.853 c1.999-3.236,5.236-5.47,9.706-6.708c4.476-1.24,10.424-1.858,17.85-1.858h40.539V0h-64.809c-37.5,0-64.433,8.897-80.803,26.691 c-16.368,17.798-24.551,44.014-24.551,78.658v48.82h-48.542v81.086h48.539v235.256h97.362V235.256h64.805l8.566-81.086H271.521z"></path></g></svg>
+                    </a>
+                    <a href="/">
+                        <svg fill="#000000" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="black" d="M1920 311.856c-70.701 33.769-146.598 56.47-226.221 66.86 81.317-52.517 143.774-135.529 173.252-234.691-76.236 48.678-160.716 84.028-250.391 103.002-71.718-82.56-174.268-134.06-287.435-134.06-217.75 0-394.165 189.966-394.165 424.206 0 33.318 3.614 65.619 10.165 96.678C617.9 616.119 327.304 447.385 133.045 190.67c-33.77 62.57-53.309 135.53-53.309 213.233 0 147.162 91.031 276.818 196.744 353.054-64.602-2.26-157.101-21.46-157.101-53.309v5.648c0 205.327 114.41 376.658 294.55 415.849-32.978 9.487-78.38 14.795-114.409 14.795-25.412 0-55.454-2.71-79.624-7.793 50.26 168.509 193.13 291.163 365.478 294.777-134.852 113.506-306.07 181.383-490.616 181.383-31.85 0-64.038-2.033-94.758-5.873 174.494 120.17 381.176 190.532 603.67 190.532 724.97 0 1121.055-646.136 1121.055-1206.55 0-18.41-.452-36.932-1.356-55.116 77.026-59.746 143.887-134.4 196.631-219.444" fill-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="/">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#0F0F0F"/>
+                            <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#0F0F0F"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#0F0F0F"/>
+                            </svg>
+                    </a>
+                    <a href="/">
+                        <svg viewBox="0 -3 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7442.000000)" fill="#000000">
+                                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                                        <path d="M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289" id="youtube-[#168]">
+                        
+                        </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer__follow-us-extra">© 2021 Qode Interactive. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+    <!-- id добавили чтобы связать с кнопкой бургер -->
+    <!-- Закрываем всплывшее окно -->
+    <form class="mobile-overlay__close-button-wrapper" method="dialog">
+        <!-- Элементы <form> могут интегрироваться с диалогом с помощью указания атрибута 
+        method="dialog". Когда отправляется такая форма, диалог закрывается с returnValue, 
+        равным значению нажатой кнопки submit. -->
+        <button class="mobile-overlay__close-button cross-button" type="submit"> <!-- Это ВАЖНО -->
+            <span class="visually-hidden">Close navigation menu</span> <!-- для скрин ридера -->
+        </button>
+    </form>
+    <div class="mobile-overlay__body">
+        <ul class="mobile-overlay__list">
+            <li class="mobile-overlay__item">
+                <a class="mobile-overlay__link" href="/">Homes</a>
+            </li>
+            <li class="mobile-overlay__item">
+                <a class="mobile-overlay__link" href="/">Pages</a>
+            </li>
+            <li class="mobile-overlay__item">
+                <a class="mobile-overlay__link" href="/">Podcast</a>
+            </li>
+            <li class="mobile-overlay__item">
+                <a class="mobile-overlay__link" href="/">Blog</a>
+            </li>
+            <li class="mobile-overlay__item">
+                <a class="mobile-overlay__link" href="/">Shop</a>
+            </li>
+        </ul>
+    </div>
+</dialog>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+body {
+    @include fluid-text(18, 16); // Надо посмотреть значение по <p/> в макете для мобильной и десктопной версии если есть
+       
+    font-family: var(--font-family-base);
+    font-weight: 700;
+    line-height: 1.28;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+   
+}
+
+a,
+input,
+button,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto; //для центрирования по горизонтали
+    padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+    @include visually-hidden;
+  }
+  
+.hidden-tablet {                  //Скроет элемент на мобильном устройстве при определенном медиазапросе
+    @include tablet {
+        display: none !important;
+    }
+}
+
+.visible-tablet {                 //Отобразит элемент на мобильных устройствах но скроет не на мобильных устройствах
+    @include tablet-above {
+        display: none !important;
+    }
+}
+.light {
+    background-color: var(--color-light);
+}  
+
+.dark {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+

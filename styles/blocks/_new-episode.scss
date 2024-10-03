@@ -1,0 +1,230 @@
+.new-episode {
+    margin-top: 100px;    
+    
+    @include desktop-l {
+        margin-top: 15px;
+        margin-inline: 115px;
+
+    }
+
+    @include desktop {
+        margin-top: 10px;
+        margin-inline: 55px;
+    }
+
+    @include tablet {
+        margin-inline: 40px;
+    }
+
+    @include mobile {
+        margin-top: 25px;
+    }
+
+
+    &__title {
+        @include fluid-text(95, 50);
+        line-height: 103px;
+        margin-bottom: 14px;
+
+        @include desktop {
+        line-height: 75px;
+        }
+
+        @include tablet {
+        line-height: 60px;
+        }
+    }
+
+    &__description {
+        font-family: var(--font-family-alt);
+        font-size: 19px;
+        line-height: 27px;
+        margin-bottom: 50px;
+
+        @include tablet {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__listen-on {
+        display: inline-flex;
+        column-gap: 23px;
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    }
+
+    &__link {
+
+        @include hover {
+            scale: 95%;
+        }
+    }
+
+    &__audio {
+        display: flex;
+        margin-top: 180px;
+        box-shadow: var(--shadow);
+        border-radius: var(--border-radius);
+
+        @include desktop-l {
+            margin-top: 130px;
+        }
+        
+        @include desktop {
+            margin-top: 70px;
+        }
+
+        @include mobile-l {
+            margin-top: 130px;
+        }
+
+        @include mobile {
+            margin-top: 105px;
+        }
+
+        &-image {
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            box-shadow: var(--shadow);
+
+
+            @include desktop {
+                height: 250px;
+                width: 250px;            
+            }
+
+            @include mobile-l {
+                height: 210px;
+                width: 210px;
+            }
+
+            @include mobile {
+                height: 190px;
+                width: 190px;            
+            }
+            
+        }
+       
+        &-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding-block:  34px; 
+            padding-right: 52px;
+            padding-left: 20px;
+            background-color: var(--color-light);
+            width: 100%;
+            max-height: 291px;
+            border-radius:0 var(--border-radius) var(--border-radius) 0;
+
+            @include desktop {
+                height: 250px;
+            }
+
+            @include tablet {
+                height: 210px;
+                padding-block:  10px; 
+                padding-right: 38px;
+            }
+
+            @include mobile-l {
+                height: 175px;
+            }
+
+            @include mobile {
+                height: 155px;
+
+            }
+        }
+
+        &-title {
+            display: inline-block;
+            font-size: 38px;
+            line-height: 44px;
+            margin-bottom: 10px;
+
+            @include tablet {
+                font-size: 31px;
+            }
+
+            @include mobile-l {
+                font-size: 26px;
+                line-height: 35px;
+                
+            }
+        }
+
+        &-description {
+            font-family: var(--font-family-alt);
+            font-size: 14px;
+            color: var(--color-gray-text);
+            line-height: 27px;
+            margin-bottom: 27px;
+
+            @include tablet {
+            margin-bottom: 0;
+            }
+
+            @include mobile-l {
+                font-size: 12px;
+            }
+        }
+
+        &-audio {
+            width: 100%;
+
+            &::-webkit-media-controls-panel {
+                background-color: var(--color-light);
+              }
+
+              @include mobile {
+                display: none;
+              }
+        }
+
+
+        &-link {
+            position: absolute;
+            top: 15%;
+            right: 8%;
+            display: inline-block;
+            transition-duration: 0.5s;
+            font-size: 15px;
+
+            @include hover {
+                opacity: 0.5;
+            }
+            
+            @include tablet {
+                top: 100%;
+            }
+
+        }
+    }
+    
+    &__button {
+        display: none;
+        position: absolute;
+        width: 45px;
+        aspect-ratio: 1;
+        background-color: var(--color-gray);
+        border-radius: var(--border-radius);
+        border: none;
+        top: 10px;
+        right: 10px;
+
+        @include hover {
+        scale: 0.9;  
+        cursor: pointer;      
+        }
+
+        @include mobile {
+            @include flex-center;
+        }
+
+    }
+}

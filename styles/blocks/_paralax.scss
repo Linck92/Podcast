@@ -1,0 +1,29 @@
+.paralax {
+    height: 710px;
+
+    @include desktop {
+        height: 650px;
+        }
+    
+    @include tablet {
+        height: 520px;
+    }
+
+    @include mobile {
+        height: 310px;
+    }    
+
+    &__video{
+        position: fixed;
+        // max-height: 710px;
+        max-width: 100vw;
+        top: 0;
+        z-index: -999;
+    }
+   
+}
+    
+
+
+
+  

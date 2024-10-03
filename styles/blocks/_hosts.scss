@@ -1,0 +1,120 @@
+.hosts {
+    padding-top: 127px;
+    padding-bottom: 138px;
+
+    @include desktop-l {
+        margin-inline: 115px;
+    }
+
+    @include mobile-l {
+        padding-top: 50px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 60px;
+
+        @include mobile-l {
+            flex-direction: column;
+            row-gap: 20px;
+            white-space: nowrap;
+        }
+    }
+
+    &__title {
+        font-size: 50px;
+    }
+    &__link {
+        font-size: 15px;
+
+        @include hover {
+            opacity: 0.5;
+        }
+    }
+
+    
+
+    &__body {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 70px;
+        justify-items: center;
+
+        @include desktop-l {
+            grid-template-columns: repeat(2, max-content);
+            justify-content: space-evenly;
+        }
+
+        @include mobile-l {
+            grid-template-columns: repeat(1, max-content);
+        }
+    }
+
+    &__soc1als {
+        display: flex;
+        column-gap: 16px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: var(--shadow);
+        border-radius: var(--border-radius);
+
+        &-title {
+            font-size: 27px;
+            max-width: 290px;
+            margin-top: 0px;
+            margin-bottom: 8px;
+        }
+
+        &-description {
+            font-family: var(--font-family-alt);
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--color-gray-text);
+            margin-bottom: 25px;
+        }
+
+        &-link {
+            @include flex-center;
+
+            font-family: var(--font-family-alt);
+            font-size: 14px;
+            font-weight: 400;
+            width: 22px;
+            height: 22px;
+            color: var(--color-light);
+            background-color: var(--color-gray-text);
+            border-radius: 50%;
+
+            @include hover {
+                opacity: 0.5;
+            }
+        }
+
+
+        &-image {
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            box-shadow: var(--shadow);
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            padding:25px;
+            width: 100%;
+            background-color: var(--color-light);
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+
+        }
+        
+    }
+
+}
